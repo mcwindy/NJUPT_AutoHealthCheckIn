@@ -13,4 +13,4 @@ The defaults options are as followed.
 
 10是否有任何与疫情相关，值得注意的情况：否
 
-** You should fill in the questionnaire truthfully according to your real situation. **
+**You should fill in the questionnaire truthfully according to your real situation.**
