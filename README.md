@@ -17,3 +17,5 @@ The defaults options are as followed.
 
 
 To run this program, you need to have python3 installed and a driver(https://pypi.org/project/selenium/) downloaded depend on which browser you use(We only support Chrome and Edge).
+
+**Please read the config.txt.**
