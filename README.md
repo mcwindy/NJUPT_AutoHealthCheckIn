@@ -1,6 +1,8 @@
 # NJUPT_AutoHealthCheckIn
 This repository is intended to make the procedure of daily health check in much more convenience.
 
+**You should fill in the questionnaire truthfully according to your real situation.**
+
 The defaults options are as followed.
 
 3上学地点：仙林
@@ -13,4 +15,5 @@ The defaults options are as followed.
 
 10是否有任何与疫情相关，值得注意的情况：否
 
-**You should fill in the questionnaire truthfully according to your real situation.**
+
+To run this program, you need to have python3 installed and a driver(https://pypi.org/project/selenium/) downloaded depend on which browser you use(We only support Chrome and Edge).
