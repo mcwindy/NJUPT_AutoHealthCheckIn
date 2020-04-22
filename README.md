@@ -5,15 +5,17 @@ This repository is intended to make the procedure of daily health check in much 
 
 The defaults options are as followed.
 
-3上学地点：仙林
+2今日所在校区：未到校
 
-4今日健康状况：正常
+3不在校原因：未返校
 
-5过去14天路过湖北或温州或正在两地：否
+4今日体温情况：小于37.3摄氏度
 
-8没到访疫情严重地区但与疫情严重地区人员或确诊病例有接触史：否
+5具体体温：36.几度
 
-10是否有任何与疫情相关，值得注意的情况：否
+6今日健康状况：正常
+
+7你今日的苏康码颜色：绿色
 
 
 To run this program, you need to have python3 installed and a driver(https://pypi.org/project/selenium/) downloaded depend on which browser you use(We only support Chrome and Edge).
