@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep, strftime, localtime
+from random import randint
 
 
 class datav:
@@ -42,22 +43,26 @@ class datav:
 
     def fucktheform(self):
         xp = [
+            # 0
             '',
+            # 1填报日期
             '',
             # 2今日所在校区
             '//*[@id="question-form"]/ul/li[2]/div[2]/div/div/li[4]/label/div[1]/i',
             # 3不在校原因
             '//*[@id="question-form"]/ul/li[3]/div[2]/div/div/li[4]/label/div[1]/i',
-            # 4当前体温
-            '//*[@id="question-form"]/ul/li[4]/div[2]/div/div/input',
-            # 5今日健康状况
-            '//*[@id="question-form"]/ul/li[5]/div[2]/div/div/li[1]/label/div[1]/i',
-            # 6你今日的苏康码颜色
+            # 4今日体温情况
+            '//*[@id="question-form"]/ul/li[4]/div[2]/div/div/li[1]/label/div[1]/i',
+            # 5具体体温
+            '//*[@id="question-form"]/ul/li[5]/div[2]/div/div/input',
+            # 6今日健康状况
             '//*[@id="question-form"]/ul/li[6]/div[2]/div/div/li[1]/label/div[1]/i',
+            # 7你今日的苏康码颜色
+            '//*[@id="question-form"]/ul/li[7]/div[2]/div/div/li[1]/label/div[1]/i',
         ]
         sleep(0.3)
-        self.driver.find_element_by_xpath(xp[4]).send_keys('正常')
-        for i in [2, 3, 5, 6]:
+        self.driver.find_element_by_xpath(xp[5]).send_keys(str(36+randint(1, 10)/10))
+        for i in [2, 3, 4, 6, 7]:
             sleep(0.3)
             self.click_xpath(xp[i])
 
@@ -76,16 +81,16 @@ class datav:
         self.click_xpath(xp)
         with open('rec.txt', 'a') as fi:
             fi.write(strftime("%Y-%m-%d %H:%M:%S\n", localtime()))
-        sleep(1)
+        sleep(0.5)
         self.driver.switch_to_alert().accept()
         print('done')
-        sleep(1)
+        sleep(0.3)
         self.driver.close()
 
 
 def main():
     flag = 0
-    print('需要chrome或edge浏览器')
+    print('需要chrome或edge浏览器及相应驱动')
     try:
         with open('rec.txt', 'r') as fi:
             con = fi.read().split('\n')
